@@ -22,7 +22,7 @@ std::string curlToObject(std::string s) {
     std::replace(s.begin(), s.end(), '\'', '\"');
 
     // 删尾连空格
-    while (!s.ends_with('\"')) {
+    while (s[s.size() - 1] != '\"') {
         s.erase(s.size() - 1, 1);
     }
 
